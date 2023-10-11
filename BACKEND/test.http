@@ -1,0 +1,48 @@
+//Referencing:
+//The Independent Institute of Education. 2023. APDS7311 Lab Guide.
+
+GET http://localhost:4000 HTTP/1.1
+###
+
+GET https://localhost:4000/api/cupcakes HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imx1aXM3MSIsInVzZXJJZCI6IjY1MjE5MmEzODFkM2U3YmUxNWIyYWNjMyIsImlhdCI6MTY5NjcwMDU5OX0.ylWahPbDvWwqEUlayjW15jJ865NLxwf_VaA9t6FH1dA
+###
+
+GET https://localhost:4000/api/users/currentId HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNhbWNhbTEiLCJ1c2VySWQiOiI2NTIxNDY1YTc4ZmU4YzAxOTQ0ODE1MjYiLCJpYXQiOjE2OTY2OTc2NTV9.nkbaz6ovJKd1icfXgtwqS98HJqxQ803mmcQCoIQpKWQ
+###
+
+
+DELETE https://localhost:4000/api/cupcakes/652186e7d8d9ad4eba759b86 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imx1aXM3MSIsInVzZXJJZCI6IjY1MjE5MmEzODFkM2U3YmUxNWIyYWNjMyIsImlhdCI6MTY5NjcwMDU5OX0.ylWahPbDvWwqEUlayjW15jJ865NLxwf_VaA9t6FH1dA
+###
+
+POST https://localhost:4000/api/users/signup HTTP/1.1
+content-type:application/json
+
+{
+    "username": "pedroP",
+    "name": "John Pedro",
+    "password": "examination5"
+}
+###
+
+POST https://localhost:4000/api/users/login HTTP/1.1
+content-type:application/json
+
+{
+    "username": "pedroP",
+    "password": "examination5"
+}
+###
+
+POST https://localhost:4000/api/cupcakes HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imx1aXM3MSIsInVzZXJJZCI6IjY1MjE5MmEzODFkM2U3YmUxNWIyYWNjMyIsImlhdCI6MTY5NjcwMDU5OX0.ylWahPbDvWwqEUlayjW15jJ865NLxwf_VaA9t6FH1dA
+
+{
+    "id": "1",
+    "flavour": "Chocolate",
+    "supplier": "CornerBakery"
+}
+###
